@@ -114,18 +114,18 @@
 
 @media (max-width: 600px) {
   .scene {
-    max-width: 220px;
+    max-width: 200px;
     perspective: 300px;
-    width: 200%;
-  max-width: 500px; /* Adjust max-width as per your preference */
-  height: 100px;
+    /* width: 200%;
+  max-width: 500px; 
+  height: 100px; */
   }
   .project {
     margin-bottom: 60rem;
   }
 
   .card {
-    width: 250px;
+    width: 220px;
   }
 
   .carousel__cell {

@@ -5,6 +5,8 @@ import toy from '../../assets/toy.png'
 import chef from '../../assets/chef.png'
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const carousel = (slider) => {
     const z = 300
     function rotate() {
@@ -21,6 +23,7 @@ const carousel = (slider) => {
     slider.on("detailsChanged", rotate)
   }
 function Services() {
+ 
       const [sliderRef] = useKeenSlider(
         {
           loop: true,
@@ -63,7 +66,7 @@ function Services() {
       <h2>Projects</h2>
     <div className="wrapper">
       <div className="scene">
-        <div className="carousel keen-slider " ref={sliderRef}>
+        <div className="carousel keen-slider " ref={sliderRef} >
           {items.map((card, index) => (
             <div className="carousel__cell number-slide1 card" key={index}>
               <div className="screenshot-container">

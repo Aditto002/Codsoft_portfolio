@@ -1,11 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.css'
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsWhatsapp } from 'react-icons/bs';
 import Swal from 'sweetalert2';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Contact() {
+  useEffect(()=>{
+    Aos.init({
+      offset: 200,
+      duration: 700,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  },[])
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -34,7 +44,7 @@ function Contact() {
       <h2>Contact Me</h2>
       
       <div className="container contact__container">
-        <div className="contact__options">
+        <div className="contact__options" data-aos="fade-up">
           <article className="contact__option">
             <AiOutlineMail className='contact__option-icon'/>
             <h4>Email</h4>
@@ -51,7 +61,7 @@ function Contact() {
           </article>
 
         </div>
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} data-aos="fade-down">
           <input type="text" name='name' placeholder='Your Name' required/>
           <input type="email" name="email" placeholder='Your Email' required />
           <textarea name="message" rows="7" placeholder='Your Massage'></textarea>
