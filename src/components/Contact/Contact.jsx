@@ -54,7 +54,7 @@ function Contact() {
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Your Name' required/>
           <input type="email" name="email" placeholder='Your Email' required />
-          <textarea name="massage" rows="7" placeholder='Your Massage'></textarea>
+          <textarea name="message" rows="7" placeholder='Your Massage'></textarea>
           <button type='submit' className='btn btn-primary'>Send Massager</button>
         </form>
       </div>

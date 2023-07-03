@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './services.css'
-import desh from '../../assets/desh1.png'
+import desh from '../../assets/desh.png'
 import toy from '../../assets/toy.png'
 import chef from '../../assets/chef.png'
 import { useKeenSlider } from "keen-slider/react"
@@ -43,7 +43,7 @@ function Services() {
         {
           image: toy,
           name: 'Toy Car',
-          details: 'Toy Car is a full-stack web application that includes authentication and a database. Features are User authentication: Users can create accounts using their email and password, or they can choose to log in with their Google account.Car association: Each user can view the cars associated with their accountCar management: Users have the ability to add, remove, and update cars in their accounts. ',
+          details: 'Toy Car is a full-stack web application that includes authentication and a database. Features are User Users can create accounts or they can choose to log in with their Google account.Each user can view the cars associated with their accountCar.Users have the ability to add, remove, and update cars in their accounts. ',
           livesite: "https://toy-car-358ac.web.app/",
           client:"https://github.com/Aditto002/Toy_Car_Client",
           server:"https://github.com/Aditto002/Toy_Car_Server"
@@ -60,13 +60,15 @@ function Services() {
   return (
     <section id="services" className='project'>
          <h5>Recently I done</h5>
-      <h2>Project</h2>
+      <h2>Projects</h2>
     <div className="wrapper">
       <div className="scene">
         <div className="carousel keen-slider " ref={sliderRef}>
           {items.map((card, index) => (
             <div className="carousel__cell number-slide1 card" key={index}>
-              <img src={card.image} alt="Card Image" className="card-img" />
+              <div className="screenshot-container">
+              <img src={card.image} alt="Card Image" className="screenshot-img"  />
+              </div>
               <div className="card-content">
                 <h2 className="card-name">{card.name}</h2>
                 <p className="card-details">{card.details}</p>
